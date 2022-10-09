@@ -1,0 +1,25 @@
+{
+  "name": "resume-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "18.10.0",
+    "npm":"8.19.2"
+  },
+  "scripts": {
+    "resumebuilder-install": "npm install --prefix resumebuilder",
+    "server": "nodemon server.js",
+    "resumebuilder": "npm start --prefix resumebuilder",
+    "dev": "concurrently \"npm run server\" \"npm run resumebuilder\"",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix resumebuilder && npm run build --prefix resumebuilder"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.6.5",
+    "nodemon": "^2.0.20"
+  }
+}
